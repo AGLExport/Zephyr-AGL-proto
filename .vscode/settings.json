@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+		"kernel.h": "c",
+		"printk.h": "c",
+		"log.h": "c",
+		"functional": "c",
+		"io-can.h": "c",
+		"adc.h": "c",
+		"can.h": "c"
+	}
+}
