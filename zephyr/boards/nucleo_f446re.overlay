@@ -3,6 +3,7 @@
 		zephyr,canbus = &can2;
 		zephyr,spi = &spi1;
 		zephyr,adc = &adc1;
+		zephyr,usbfunc = &usbotg_hs;
 	};
 };
 
@@ -12,4 +13,14 @@
 	st,adc-clock-source = <SYNC>;
 	st,adc-prescaler = <2>;
 	status = "okay";
+};
+
+&usbotg_hs {
+	pinctrl-0 = <&usb_otg_hs_dp_pb15 &usb_otg_hs_dm_pb14 >;
+	pinctrl-names = "default";
+	status = "okay";
+
+	cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+	};
 };
