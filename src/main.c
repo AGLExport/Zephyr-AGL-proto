@@ -30,8 +30,8 @@ void main(void)
 		uart_poll_out (uart_dev, 'g');
 		uart_poll_out (uart_dev, 'e');
 
-        //k_usleep(250 * 1000);
-        k_usleep(1);
+        k_usleep(250 * 1000);
+        //k_usleep(1);
     }
 do_return:
 	return;
