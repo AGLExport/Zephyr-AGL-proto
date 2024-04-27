@@ -54,7 +54,7 @@ do_return:
 //-------------------------------------------------------------
 static void can_rx_callback_proc(const struct device *dev, struct can_frame *frame, void *user_data)
 {
-    printk("ID:%X  dlc:%d  data: %x:%x:%x:%x:%x:%x:%x:%x\n"
+    LOG_INF("ID:%X  dlc:%d  data: %x:%x:%x:%x:%x:%x:%x:%x\n"
             ,frame->id, frame->dlc
             ,frame->data[0],frame->data[1],frame->data[2],frame->data[3]
             ,frame->data[4],frame->data[5],frame->data[6],frame->data[7]);
